@@ -1,4 +1,5 @@
-import './globals.css'
+import { Logo, SidebarNav } from '@/components'
+import '@/styles/main.css'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +13,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='min-h-screen w-full bg-violet-600 flex'>
+        <aside className='flex flex-col pl-9 pr-7 py-8 flex-1 gap-14'>
+          <Logo />
+
+          <SidebarNav />
+        </aside>
+        <div className='mt-1 rounded-tl-3xl bg-zinc-50 px-8 py-12 w-full'>
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
