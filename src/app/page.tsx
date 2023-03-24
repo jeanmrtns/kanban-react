@@ -1,5 +1,5 @@
 "use client"
-import { Avatar } from "@/components";
+import { Avatar, TaskCard } from "@/components";
 import { Faders, MagnifyingGlass, Pen } from "phosphor-react";
 
 export default function Home() {
@@ -22,10 +22,37 @@ export default function Home() {
           Filtrar
         </button>
 
-        <label className="flex items-center border border-zinc-200 flex-1 py-3 gap-2 px-6 bg-white rounded focus-within:border-violet-500">
+        <label className="flex shadow-sm items-center border border-zinc-200 flex-1 py-3 gap-2 px-6 bg-white rounded focus-within:border-violet-500">
           <MagnifyingGlass size={24} weight="fill" className="text-zinc-500" />
           <input type="text" placeholder="Busque por cards, assuntos ou responsáveis..." className="placeholder:text-zinc-400 w-full border-0 outline-none" />
         </label>
+      </section>
+
+      <section className="grid grid-cols-3 gap-[4.5rem] mt-14">
+        <div>
+          <strong className="font-bold text-zinc-800 text-xl">A fazer</strong>
+          <ul className="mt-6 flex flex-col gap-6">
+            <TaskCard />
+            <TaskCard />
+          </ul>
+        </div>
+
+        <div>
+          <strong className="font-bold text-zinc-800 text-xl">Fazendo</strong>
+          <ul className="mt-6 flex flex-col gap-6">
+            <TaskCard />
+            <TaskCard />
+            <TaskCard />
+            <TaskCard />
+          </ul>
+        </div>
+
+        <div>
+          <strong className="font-bold text-zinc-800 text-xl">Feito</strong>
+          <ul className="mt-6 flex flex-col gap-6">
+            <TaskCard />
+          </ul>
+        </div>
       </section>
     </main>
   )
