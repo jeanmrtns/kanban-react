@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply scrollbar-thin scrollbar-thumb-violet-600 scrollbar-track-violet-100;
+}
