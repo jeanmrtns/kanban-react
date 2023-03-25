@@ -32,25 +32,23 @@ export default function Home() {
         <div>
           <strong className="font-bold text-zinc-800 text-xl">A fazer</strong>
           <ul className="mt-6 flex flex-col gap-6">
-            <TaskCard />
-            <TaskCard />
+            <TaskCard
+              tags={["initial", "first"]}
+              content="The content of this task"
+              title="First task"
+            />
           </ul>
         </div>
 
         <div>
           <strong className="font-bold text-zinc-800 text-xl">Fazendo</strong>
           <ul className="mt-6 flex flex-col gap-6">
-            <TaskCard />
-            <TaskCard />
-            <TaskCard />
-            <TaskCard />
           </ul>
         </div>
 
         <div>
           <strong className="font-bold text-zinc-800 text-xl">Feito</strong>
           <ul className="mt-6 flex flex-col gap-6">
-            <TaskCard />
           </ul>
         </div>
       </section>
