@@ -8,7 +8,7 @@ interface TaskCardProps {
 
 export function TaskCard({ title, content, tags }: TaskCardProps) {
   return (
-    <div className="p-6 rounded shadow-md h-[153px] w-full bg-white">
+    <div className="p-6 rounded shadow-md h-[153px] w-full bg-white mb-4">
       <header>
         <strong className="font-bold text-sm">
           {title}
@@ -21,8 +21,8 @@ export function TaskCard({ title, content, tags }: TaskCardProps) {
 
       <footer className="mt-[0.625rem]">
         <ul className="flex items-center gap-2">
-          {tags.map(tag => (
-            <li key={tag} className="text-[11px] rounded-lg font-medium text-violet-500 bg-violet-300 px-2 py-1">
+          {tags.map((tag, index) => (
+            <li key={index} className="text-[11px] rounded-lg font-medium text-violet-500 bg-violet-300 px-2 py-1">
               {tag}
             </li>
           ))}
