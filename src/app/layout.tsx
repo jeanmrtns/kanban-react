@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='min-h-screen w-full bg-violet-600 flex'>
-        <aside className='flex flex-col pl-9 pr-7 py-8 flex-1 gap-14'>
+        <aside className='flex flex-col pl-9 pr-12 py-8 w-56 gap-14'>
           <Logo />
 
           <SidebarNav />
